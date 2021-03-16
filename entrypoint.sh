@@ -51,7 +51,7 @@ fi
 
 echo "Prettifing files..."
 echo "Files:"
-prettier --config .prettierrc || echo "Problem running prettier with $INPUT_PRETTIER_OPTIONS"
+prettier $INPUT_PRETTIER_OPTIONS --config .prettierrc || echo "Problem running prettier with $INPUT_PRETTIER_OPTIONS"
 
 # To keep runtime good, just continue if something was changed
 if _git_changed; then
